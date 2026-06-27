@@ -1,3 +1,151 @@
+const visualFixStyle = document.createElement('style');
+visualFixStyle.textContent = `
+  .hero-content.reveal,
+  .hero-card.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero h1 {
+    color: #fff !important;
+    text-shadow: 0 4px 18px rgba(0,0,0,.85), 0 0 2px #000;
+  }
+
+  .hero h1::first-line {
+    color: #ffd21f;
+  }
+
+  .hero-lead,
+  .hero-card,
+  .hero-card p {
+    opacity: 1 !important;
+  }
+
+  .section-heading h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 14px;
+  }
+
+  .section-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 72px;
+    height: 6px;
+    border-radius: 999px;
+    background: #ffd21f;
+    transform: translateX(-50%);
+    box-shadow: 0 3px 0 #111;
+  }
+
+  .section-heading.invert h2 {
+    color: #fff !important;
+    text-shadow: 0 3px 18px rgba(0,0,0,.75);
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      display: block !important;
+      min-height: auto !important;
+      padding: 0 0 52px !important;
+      background: #050505 !important;
+    }
+
+    .hero::before,
+    .hero::after {
+      display: none !important;
+    }
+
+    .hero-bg {
+      position: relative !important;
+      inset: auto !important;
+      opacity: 1 !important;
+      filter: none !important;
+      background: #000 !important;
+    }
+
+    .hero-bg img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      animation: none !important;
+    }
+
+    .hero-content {
+      max-width: none !important;
+      padding: 34px 4vw 0 !important;
+      background: linear-gradient(180deg, #050505 0%, #111 100%) !important;
+    }
+
+    .hero .eyebrow {
+      color: #111 !important;
+      background: #ffd21f !important;
+      font-size: 12px !important;
+      box-shadow: 0 3px 0 #111;
+    }
+
+    .hero h1 {
+      color: #fff !important;
+      font-size: clamp(38px, 11vw, 58px) !important;
+      line-height: 1.12 !important;
+      letter-spacing: -0.05em !important;
+      text-shadow: 0 4px 20px rgba(0,0,0,.95), 0 0 2px #000 !important;
+      border-left: 8px solid #ffd21f;
+      padding-left: 14px;
+    }
+
+    .hero h1::first-line {
+      color: #ffd21f !important;
+    }
+
+    .hero-lead {
+      color: #fff !important;
+      font-size: 16px !important;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .hero-actions {
+      gap: 16px !important;
+      margin-top: 26px !important;
+    }
+
+    .hero-actions .btn {
+      min-height: 64px !important;
+      font-size: 18px !important;
+    }
+
+    .hero-card {
+      margin: 26px 4vw 0 !important;
+      background: #fffdf6 !important;
+      color: #111 !important;
+      border: 3px solid #ffd21f !important;
+      box-shadow: 7px 7px 0 #ffd21f !important;
+    }
+
+    .fixed-line {
+      bottom: 14px !important;
+      left: 18px !important;
+      right: 18px !important;
+      text-align: center !important;
+      min-height: 58px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 18px !important;
+    }
+  }
+`;
+document.head.appendChild(visualFixStyle);
+
+document.querySelectorAll('.hero .reveal').forEach((target) => {
+  target.classList.add('active');
+});
+
 const revealTargets = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver((entries) => {
@@ -75,4 +223,4 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
 });
 
-console.log('HADAOJI PRINT LP refactored');
+console.log('HADAOJI PRINT LP mobile contrast fixed');
