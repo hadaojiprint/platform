@@ -23,4 +23,42 @@ if (menuToggle && siteNav) {
   });
 }
 
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  if (!header) return;
+  header.classList.toggle('scrolled', window.scrollY > 24);
+});
+
+const workCards = document.querySelectorAll('.work-card img');
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = '<button class="lightbox-close" type="button">×</button><img alt="制作実績拡大画像">';
+document.body.appendChild(lightbox);
+
+const lightboxImage = lightbox.querySelector('img');
+const closeButton = lightbox.querySelector('.lightbox-close');
+
+workCards.forEach((image) => {
+  image.addEventListener('click', () => {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+const closeLightbox = () => {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+closeButton.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeLightbox();
+});
+
 console.log('HADAOJI PLATFORM animated LP ready');
