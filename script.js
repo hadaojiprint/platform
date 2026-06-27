@@ -10,5 +10,17 @@ const observer = new IntersectionObserver((entries) => {
 
 revealTargets.forEach((target) => observer.observe(target));
 
-const year = new Date().getFullYear();
-console.log(`HADAOJI PLATFORM ${year}`);
+const menuToggle = document.querySelector('.menu-toggle');
+const siteNav = document.querySelector('.site-nav');
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('open');
+  });
+
+  siteNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => siteNav.classList.remove('open'));
+  });
+}
+
+console.log('HADAOJI PLATFORM animated LP ready');
