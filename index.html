@@ -11,6 +11,16 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/hero.png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero,.worries,.flow,.price,.cta{position:relative;overflow:hidden}
+    .mascot{position:absolute;z-index:8;width:clamp(86px,10vw,150px);height:auto;pointer-events:none;user-select:none;filter:drop-shadow(0 16px 28px rgba(0,0,0,.35))}
+    .mascot-hero{right:5vw;bottom:110px;width:clamp(120px,16vw,220px);transform:rotate(-6deg)}
+    .mascot-worries{left:4vw;bottom:26px;width:clamp(92px,11vw,160px);transform:rotate(7deg);opacity:.96}
+    .mascot-flow{right:4vw;top:86px;width:clamp(84px,9vw,140px);transform:rotate(-8deg);opacity:.95}
+    .mascot-price{left:5vw;top:78px;width:clamp(80px,8vw,130px);transform:rotate(5deg);opacity:.9}
+    .mascot-cta{right:5vw;bottom:20px;width:clamp(110px,13vw,180px);transform:rotate(-4deg)}
+    @media (max-width:900px){.mascot-hero{right:4vw;bottom:12px;width:90px}.mascot-worries,.mascot-flow,.mascot-price{display:none}.mascot-cta{right:2vw;bottom:8px;width:110px;opacity:.28}}
+  </style>
 </head>
 <body>
   <header class="site-header" data-header>
@@ -48,6 +58,7 @@
         <strong>画像を送るだけ</strong>
         <p>ラフ・参考画像・言葉だけのイメージでもOKです。</p>
       </div>
+      <img class="mascot mascot-hero" src="assets/hadaoji-kun.svg?v=2" alt="ハダオジくん">
     </section>
 
     <section class="trust-strip" aria-label="HADAOJI PRINTの特徴">
@@ -75,6 +86,7 @@
         <span>その悩み、</span>
         <strong>HADAOJI PRINTが解決します。</strong>
       </div>
+      <img class="mascot mascot-worries" src="assets/hadaoji-kun.svg?v=2" alt="ハダオジくん">
     </section>
 
     <section id="works" class="works-band">
@@ -118,6 +130,7 @@
         <article class="reveal"><span>4</span><b>お見積り</b><p>仕様に合わせて金額をご案内します。</p></article>
         <article class="reveal"><span>5</span><b>制作・納品</b><p>確定後、丁寧にプリントしてお届けします。</p></article>
       </div>
+      <img class="mascot mascot-flow" src="assets/hadaoji-kun.svg?v=2" alt="ハダオジくん">
     </section>
 
     <section id="price" class="section price">
@@ -132,6 +145,7 @@
         <article class="reveal"><b>クラT・イベント</b><strong>30枚 49,800円〜</strong><p>胸＋背中プリントの目安</p></article>
       </div>
       <p class="price-note reveal">※ボディ・プリント箇所・色数・製版の有無により変動します。</p>
+      <img class="mascot mascot-price" src="assets/hadaoji-kun.svg?v=2" alt="ハダオジくん">
     </section>
 
     <section class="section voices">
@@ -141,41 +155,14 @@
         <p>実際の着用イメージと一緒に、制作の雰囲気をご紹介します。</p>
       </div>
       <div class="voice-grid">
-        <article class="voice-card reveal">
-          <img class="voice-photo" src="assets/voices/team.PNG" alt="チームウェアの着用写真" loading="lazy">
-          <div class="voice-body">
-            <span class="voice-tag team">TEAM</span>
-            <strong class="stars">★★★★★</strong>
-            <p>デザインの相談から丁寧に対応していただき、イメージ以上の仕上がりでした。</p>
-            <small>常総学院ラグビー部 様｜チームウェア</small>
-          </div>
-        </article>
-        <article class="voice-card reveal">
-          <img class="voice-photo" src="assets/voices/shop.PNG" alt="店舗ウェアの着用写真" loading="lazy">
-          <div class="voice-body">
-            <span class="voice-tag shop">SHOP</span>
-            <strong class="stars">★★★★★</strong>
-            <p>返信も早く、イベントまでに間に合いました。スタッフ用ウェアも相談しやすかったです。</p>
-            <small>おでんやはずみ 様｜店舗ウェア</small>
-          </div>
-        </article>
-        <article class="voice-card reveal">
-          <img class="voice-photo" src="assets/voices/farm.PNG" alt="農園スタッフTシャツの着用写真" loading="lazy">
-          <div class="voice-body">
-            <span class="voice-tag company">COMPANY</span>
-            <strong class="stars">★★★★★</strong>
-            <p>ロゴデザインから相談でき、イメージ通りのスタッフTシャツになりました。</p>
-            <small>株式会社REI FARM 様｜スタッフTシャツ</small>
-          </div>
-        </article>
+        <article class="voice-card reveal"><img class="voice-photo" src="assets/voices/team.PNG" alt="チームウェアの着用写真" loading="lazy"><div class="voice-body"><span class="voice-tag team">TEAM</span><strong class="stars">★★★★★</strong><p>デザインの相談から丁寧に対応していただき、イメージ以上の仕上がりでした。</p><small>常総学院ラグビー部 様｜チームウェア</small></div></article>
+        <article class="voice-card reveal"><img class="voice-photo" src="assets/voices/shop.PNG" alt="店舗ウェアの着用写真" loading="lazy"><div class="voice-body"><span class="voice-tag shop">SHOP</span><strong class="stars">★★★★★</strong><p>返信も早く、イベントまでに間に合いました。スタッフ用ウェアも相談しやすかったです。</p><small>おでんやはずみ 様｜店舗ウェア</small></div></article>
+        <article class="voice-card reveal"><img class="voice-photo" src="assets/voices/farm.PNG" alt="農園スタッフTシャツの着用写真" loading="lazy"><div class="voice-body"><span class="voice-tag company">COMPANY</span><strong class="stars">★★★★★</strong><p>ロゴデザインから相談でき、イメージ通りのスタッフTシャツになりました。</p><small>株式会社REI FARM 様｜スタッフTシャツ</small></div></article>
       </div>
     </section>
 
     <section class="section faq">
-      <div class="section-heading reveal">
-        <p class="eyebrow">FAQ</p>
-        <h2>よくある質問</h2>
-      </div>
+      <div class="section-heading reveal"><p class="eyebrow">FAQ</p><h2>よくある質問</h2></div>
       <div class="faq-list">
         <details class="reveal" open><summary>デザインが無くても大丈夫ですか？</summary><p>もちろん大丈夫です。参考画像・手描きラフ・言葉だけのイメージから相談できます。</p></details>
         <details class="reveal"><summary>何枚から注文できますか？</summary><p>1枚から制作可能です。チームや学校向けのまとまった枚数も対応できます。</p></details>
@@ -188,21 +175,13 @@
       <p class="eyebrow">CONTACT</p>
       <h2>まずは無料で<br>相談してみませんか？</h2>
       <p>まだ注文すると決めていなくても大丈夫です。イメージだけでもお気軽にご相談ください。</p>
-      <div class="cta-actions">
-        <a class="btn primary large pulse" href="https://lin.ee/WvAakgk">LINEで無料見積り</a>
-        <a class="btn secondary light large" href="https://www.instagram.com/hadaoji_print/">Instagramを見る</a>
-      </div>
+      <div class="cta-actions"><a class="btn primary large pulse" href="https://lin.ee/WvAakgk">LINEで無料見積り</a><a class="btn secondary light large" href="https://www.instagram.com/hadaoji_print/">Instagramを見る</a></div>
+      <img class="mascot mascot-cta" src="assets/hadaoji-kun.svg?v=2" alt="ハダオジくん">
     </section>
   </main>
 
   <a class="fixed-line" href="https://lin.ee/WvAakgk" aria-label="LINEで相談する">LINEで相談</a>
-
-  <footer class="site-footer">
-    <strong>HADAOJI PRINT</strong>
-    <p>株式会社ハダオジ｜オリジナルウェア制作工房</p>
-    <p>Instagram: @hadaoji_print</p>
-  </footer>
-
+  <footer class="site-footer"><strong>HADAOJI PRINT</strong><p>株式会社ハダオジ｜オリジナルウェア制作工房</p><p>Instagram: @hadaoji_print</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
