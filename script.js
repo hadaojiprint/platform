@@ -11,15 +11,11 @@ visualFixStyle.textContent = `
     text-shadow: 0 4px 18px rgba(0,0,0,.85), 0 0 2px #000;
   }
 
-  .hero h1::first-line {
-    color: #ffd21f;
-  }
+  .hero h1::first-line { color: #ffd21f; }
 
   .hero-lead,
   .hero-card,
-  .hero-card p {
-    opacity: 1 !important;
-  }
+  .hero-card p { opacity: 1 !important; }
 
   .section-heading h2 {
     position: relative;
@@ -45,6 +41,81 @@ visualFixStyle.textContent = `
     text-shadow: 0 3px 18px rgba(0,0,0,.75);
   }
 
+  .voices {
+    background: #f7f4ec !important;
+    color: #141414 !important;
+  }
+
+  .voices .section-heading p:not(.eyebrow) {
+    color: #555 !important;
+  }
+
+  .voice-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+  }
+
+  .voice-card {
+    overflow: hidden !important;
+    padding: 0 !important;
+    border-radius: 28px !important;
+    background: #fff !important;
+    color: #141414 !important;
+    border: 2px solid #111 !important;
+    box-shadow: 7px 7px 0 #111 !important;
+  }
+
+  .voice-photo {
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    background: #ddd !important;
+  }
+
+  .voice-body {
+    padding: 24px !important;
+  }
+
+  .voice-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    border-radius: 999px !important;
+    padding: 6px 12px !important;
+    margin-bottom: 12px !important;
+    color: #fff !important;
+    font-size: 12px !important;
+    font-weight: 1000 !important;
+    letter-spacing: .08em !important;
+  }
+
+  .voice-tag.team { background: #0b2a55 !important; }
+  .voice-tag.shop { background: #e36b18 !important; }
+  .voice-tag.company { background: #276b3a !important; }
+
+  .stars {
+    display: block !important;
+    color: #d9a928 !important;
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .voice-card p {
+    color: #141414 !important;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    line-height: 1.7 !important;
+    margin: 0 0 16px !important;
+  }
+
+  .voice-card small {
+    display: block !important;
+    color: #555 !important;
+    font-weight: 800 !important;
+  }
+
   @media (max-width: 900px) {
     .hero {
       display: block !important;
@@ -52,12 +123,8 @@ visualFixStyle.textContent = `
       padding: 0 0 52px !important;
       background: #050505 !important;
     }
-
     .hero::before,
-    .hero::after {
-      display: none !important;
-    }
-
+    .hero::after { display: none !important; }
     .hero-bg {
       position: relative !important;
       inset: auto !important;
@@ -65,27 +132,23 @@ visualFixStyle.textContent = `
       filter: none !important;
       background: #000 !important;
     }
-
     .hero-bg img {
       width: 100% !important;
       height: auto !important;
       object-fit: contain !important;
       animation: none !important;
     }
-
     .hero-content {
       max-width: none !important;
       padding: 34px 4vw 0 !important;
       background: linear-gradient(180deg, #050505 0%, #111 100%) !important;
     }
-
     .hero .eyebrow {
       color: #111 !important;
       background: #ffd21f !important;
       font-size: 12px !important;
       box-shadow: 0 3px 0 #111;
     }
-
     .hero h1 {
       color: #fff !important;
       font-size: clamp(38px, 11vw, 58px) !important;
@@ -95,11 +158,7 @@ visualFixStyle.textContent = `
       border-left: 8px solid #ffd21f;
       padding-left: 14px;
     }
-
-    .hero h1::first-line {
-      color: #ffd21f !important;
-    }
-
+    .hero h1::first-line { color: #ffd21f !important; }
     .hero-lead {
       color: #fff !important;
       font-size: 16px !important;
@@ -108,17 +167,8 @@ visualFixStyle.textContent = `
       border-radius: 18px;
       padding: 16px;
     }
-
-    .hero-actions {
-      gap: 16px !important;
-      margin-top: 26px !important;
-    }
-
-    .hero-actions .btn {
-      min-height: 64px !important;
-      font-size: 18px !important;
-    }
-
+    .hero-actions { gap: 16px !important; margin-top: 26px !important; }
+    .hero-actions .btn { min-height: 64px !important; font-size: 18px !important; }
     .hero-card {
       margin: 26px 4vw 0 !important;
       background: #fffdf6 !important;
@@ -126,7 +176,8 @@ visualFixStyle.textContent = `
       border: 3px solid #ffd21f !important;
       box-shadow: 7px 7px 0 #ffd21f !important;
     }
-
+    .voice-grid { grid-template-columns: 1fr !important; }
+    .voice-card p { font-size: 17px !important; }
     .fixed-line {
       bottom: 14px !important;
       left: 18px !important;
@@ -223,4 +274,4 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
 });
 
-console.log('HADAOJI PRINT LP mobile contrast fixed');
+console.log('HADAOJI PRINT LP customer voice photos updated');
