@@ -3,24 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HADAOJI PRINT｜デザインがなくても大丈夫。一緒に考えて、カタチにします。</title>
-  <meta name="description" content="HADAOJI PRINTは、オリジナルTシャツ・チームウェア・企業ユニフォームを1枚から制作。デザイン相談無料。学校・部活・飲食店・企業のウェア制作をサポートします。" />
+  <title>HADAOJI PRINT｜茨城のオリジナルTシャツ・チームウェア制作</title>
+  <meta name="description" content="HADAOJI PRINTは茨城県から全国対応のオリジナルTシャツ・チームウェア・店舗ユニフォーム制作工房です。1枚からOK、デザイン相談無料。ラフ画像や参考画像を送るだけで見積りできます。" />
   <meta name="format-detection" content="telephone=no" />
-  <meta property="og:title" content="HADAOJI PRINT｜オリジナルウェア制作" />
-  <meta property="og:description" content="デザインがなくても大丈夫。一緒に考えて、カタチにします。" />
+  <link rel="canonical" href="https://hadaojiprint.github.io/platform/" />
+  <meta property="og:title" content="HADAOJI PRINT｜茨城のオリジナルウェア制作" />
+  <meta property="og:description" content="デザインがなくても大丈夫。一緒に考えて、カタチにします。1枚からOK・デザイン相談無料。" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/hero.png" />
+  <meta property="og:url" content="https://hadaojiprint.github.io/platform/" />
+  <meta property="og:image" content="https://hadaojiprint.github.io/platform/assets/hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" as="image" href="assets/hero.png" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .hero,.worries,.flow,.price,.cta{position:relative;overflow:hidden}
+    .hero,.worries,.flow,.price,.cta,.services,.area,.start-guide{position:relative;overflow:hidden}
     .mascot{position:absolute;z-index:8;width:clamp(86px,10vw,150px);height:auto;pointer-events:none;user-select:none;filter:drop-shadow(0 16px 28px rgba(0,0,0,.35));opacity:1;transform:none}
     .mascot-hero{right:5vw;bottom:110px;width:clamp(120px,16vw,220px)}
     .mascot-worries{left:4vw;bottom:26px;width:clamp(92px,11vw,160px)}
     .mascot-flow{right:4vw;top:86px;width:clamp(84px,9vw,140px)}
     .mascot-price{left:5vw;top:78px;width:clamp(80px,8vw,130px)}
     .mascot-cta{right:5vw;bottom:20px;width:clamp(110px,13vw,180px);opacity:1}
-    @media (max-width:900px){.mascot-hero{right:4vw;bottom:12px;width:90px}.mascot-worries,.mascot-flow,.mascot-price{display:none}.mascot-cta{right:2vw;bottom:8px;width:110px;opacity:1}}
+    .hero-mini{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.hero-mini span{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 12px;color:#fff;font-weight:900;background:rgba(0,0,0,.28)}
+    .quick-estimate{margin-top:22px;color:#ffeb91;font-weight:1000;font-size:15px}.quick-estimate b{color:#fff}
+    .service-grid,.area-grid,.guide-grid{display:grid;gap:18px;max-width:1180px;margin:0 auto}.service-grid{grid-template-columns:repeat(3,1fr)}.service-card{background:#fff;border:2px solid #111;border-radius:28px;padding:28px;box-shadow:6px 6px 0 #111}.service-card span{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#ffd21f;border:2px solid #111;font-weight:1000;margin-bottom:12px}.service-card h3{margin:0 0 10px;font-size:24px;line-height:1.25}.service-card p{margin:0;color:#555;font-weight:800}.service-card ul{margin:16px 0 0;padding-left:1.1em;color:#333;font-weight:800}.service-card li{margin:4px 0}
+    .start-guide{background:#111;color:#fff}.guide-grid{grid-template-columns:repeat(4,1fr)}.guide-card{background:#1c1c1c;border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:24px}.guide-card b{display:block;color:#ffd21f;font-size:20px;margin-bottom:8px}.guide-card p{margin:0;color:#eee;font-weight:800}.guide-note{max-width:900px;margin:26px auto 0;padding:18px 22px;border-radius:18px;background:#ffd21f;color:#111;text-align:center;font-weight:1000}
+    .area{background:linear-gradient(180deg,#fffdf6,#f7f4ec)}.area-grid{grid-template-columns:1.1fr .9fr;align-items:center}.area-box{background:#fff;border:2px solid #111;border-radius:30px;padding:32px;box-shadow:6px 6px 0 #111}.area-box h3{font-size:clamp(28px,4vw,46px);line-height:1.12;margin:0 0 14px}.area-box p{font-weight:800;color:#444}.keyword-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.keyword-list span{background:#111;color:#fff;border-radius:999px;padding:8px 12px;font-weight:900;font-size:13px}.area-check{display:grid;gap:12px}.area-check div{background:#111;color:#fff;border-radius:20px;padding:18px 20px;font-weight:1000;border-left:8px solid #ffd21f}
+    .voice-photo{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px;margin-bottom:18px}.voice-tag{display:inline-flex;border-radius:999px;padding:5px 10px;background:#ffd21f;color:#111!important;font-size:12px;letter-spacing:.08em}.stars{display:block;color:#ffd21f;margin-top:10px}.footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px}.footer-links a{color:#ffd21f;font-weight:900}
+    @media (max-width:1080px){.service-grid,.guide-grid,.area-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:900px){.mascot-hero{right:4vw;bottom:12px;width:90px}.mascot-worries,.mascot-flow,.mascot-price{display:none}.mascot-cta{right:2vw;bottom:8px;width:110px;opacity:1}.service-grid,.guide-grid,.area-grid{grid-template-columns:1fr}.hero-mini span{font-size:12px}.service-card,.area-box{border-radius:22px}}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"HADAOJI PRINT",
+    "alternateName":"ハダオジプリント",
+    "url":"https://hadaojiprint.github.io/platform/",
+    "image":"https://hadaojiprint.github.io/platform/assets/hero.png",
+    "description":"茨城県から全国対応のオリジナルTシャツ・チームウェア・店舗ユニフォーム制作工房。1枚からOK、デザイン相談無料。",
+    "areaServed":["茨城県","つくば市","土浦市","常総市","全国"],
+    "sameAs":["https://www.instagram.com/hadaoji_print/"]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header" data-header>
@@ -30,7 +54,7 @@
     </a>
     <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" data-menu-toggle>☰</button>
     <nav class="site-nav" data-nav>
-      <a href="#worries">お悩み</a>
+      <a href="#services">できること</a>
       <a href="#works">制作実績</a>
       <a href="#reason">選ばれる理由</a>
       <a href="#flow">流れ</a>
@@ -43,24 +67,48 @@
     <section class="hero">
       <div class="hero-bg" aria-hidden="true"><img src="assets/hero.png" alt="" /></div>
       <div class="hero-content reveal">
-        <p class="eyebrow">1枚からOK・デザイン相談無料</p>
+        <p class="eyebrow">茨城から全国対応｜1枚からOK</p>
         <h1>デザインがなくても大丈夫。<br>一緒に考えて、<br class="sp-only">カタチにします。</h1>
-        <p class="hero-lead">オリジナルTシャツ・チームウェア・企業ユニフォームを、相談からプリントまでまるごとサポートします。</p>
+        <p class="hero-lead">オリジナルTシャツ・チームウェア・店舗ユニフォームを、相談からプリントまでまるごとサポートします。</p>
+        <div class="hero-mini" aria-label="対応内容">
+          <span>学校・部活</span><span>店舗スタッフ</span><span>企業ユニフォーム</span><span>イベントTシャツ</span>
+        </div>
+        <p class="quick-estimate">見積りに必要なのは <b>枚数・色・プリント位置・希望納期</b> だけでもOK。</p>
         <div class="hero-actions"><a class="btn primary pulse" href="https://lin.ee/WvAakgk">LINEで無料見積り</a><a class="btn secondary" href="#works">制作実績を見る</a></div>
       </div>
       <div class="hero-card reveal"><span>最短相談</span><strong>画像を送るだけ</strong><p>ラフ・参考画像・言葉だけのイメージでもOKです。</p></div>
-      <img class="mascot mascot-hero" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
+      <img class="mascot mascot-hero" src="assets/hadaoji-kun.png?v=6" alt="ハダオジくん">
     </section>
 
     <section class="trust-strip" aria-label="HADAOJI PRINTの特徴">
-      <div><strong>1枚〜</strong><span>小ロット歓迎</span></div><div><strong>無料</strong><span>デザイン相談</span></div><div><strong>修正OK</strong><span>納得まで相談</span></div><div><strong>全国</strong><span>発送対応</span></div><div><strong>実績</strong><span>学校・企業・イベント</span></div>
+      <div><strong>1枚〜</strong><span>小ロット歓迎</span></div><div><strong>無料</strong><span>デザイン相談</span></div><div><strong>修正OK</strong><span>納得まで相談</span></div><div><strong>全国</strong><span>発送対応</span></div><div><strong>相談型</strong><span>画像だけでOK</span></div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-heading reveal"><p class="eyebrow">SERVICE</p><h2>作りたいウェアに合わせて<br>相談できます</h2><p>チーム用・店舗用・イベント用まで、用途に合わせた見せ方をご提案します。</p></div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span>部</span><h3>チームウェア・クラT</h3><p>学校、部活、サークル、イベント向け。背中大きめのデザインや番号入りも相談できます。</p><ul><li>ラグビー・野球・サッカー</li><li>クラスTシャツ</li><li>大会・イベントTシャツ</li></ul></article>
+        <article class="service-card reveal"><span>店</span><h3>店舗スタッフウェア</h3><p>飲食店や美容室など、お店の雰囲気に合うロゴ配置・カラーを一緒に考えます。</p><ul><li>Tシャツ・ロンT</li><li>エプロン</li><li>キャップ・トートバッグ</li></ul></article>
+        <article class="service-card reveal"><span>企</span><h3>企業ユニフォーム</h3><p>作業着、スタッフTシャツ、販促用ウェアなど、会社ロゴを活かした制作に対応します。</p><ul><li>会社ロゴプリント</li><li>小ロット追加</li><li>全国発送対応</li></ul></article>
+      </div>
     </section>
 
     <section id="worries" class="section worries">
       <div class="section-heading reveal"><p class="eyebrow">PROBLEM</p><h2>こんなお悩みありませんか？</h2><p>はじめてのオリジナルウェア制作でも、安心して相談できます。</p></div>
       <div class="worry-grid"><article class="worry-card reveal">デザインが作れない</article><article class="worry-card reveal">イメージだけしかない</article><article class="worry-card reveal">他社の見積が高い</article><article class="worry-card reveal">納期が心配</article><article class="worry-card reveal">少量だから断られそう</article></div>
       <div class="solution reveal"><span>その悩み、</span><strong>HADAOJI PRINTが解決します。</strong></div>
-      <img class="mascot mascot-worries" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
+      <img class="mascot mascot-worries" src="assets/hadaoji-kun.png?v=6" alt="ハダオジくん">
+    </section>
+
+    <section class="section start-guide">
+      <div class="section-heading invert reveal"><p class="eyebrow">START</p><h2>相談前に決まっていなくても大丈夫</h2><p>ざっくりした状態から一緒に整理します。</p></div>
+      <div class="guide-grid">
+        <article class="guide-card reveal"><b>画像だけ</b><p>参考画像や手描きラフを送ってください。</p></article>
+        <article class="guide-card reveal"><b>枚数だけ</b><p>10枚くらい、30枚くらいなど大体でOK。</p></article>
+        <article class="guide-card reveal"><b>用途だけ</b><p>部活用、店舗用、イベント用など目的から提案します。</p></article>
+        <article class="guide-card reveal"><b>納期だけ</b><p>いつまでに必要かを先に教えてください。</p></article>
+      </div>
+      <p class="guide-note reveal">LINEで「Tシャツ作りたいです」と送るだけでもスタートできます。</p>
     </section>
 
     <section id="works" class="works-band">
@@ -82,14 +130,21 @@
     <section id="flow" class="section flow">
       <div class="section-heading reveal"><p class="eyebrow">FLOW</p><h2>ご注文の流れ</h2><p>LINEで画像やイメージを送るだけでスタートできます。</p></div>
       <div class="steps"><article class="reveal"><span>1</span><b>お問い合わせ</b><p>LINE・Instagramからご相談ください。</p></article><article class="reveal"><span>2</span><b>ヒアリング</b><p>枚数・色・用途・納期を確認します。</p></article><article class="reveal"><span>3</span><b>デザイン確認</b><p>ラフや画像をもとに制作イメージを整えます。</p></article><article class="reveal"><span>4</span><b>お見積り</b><p>仕様に合わせて金額をご案内します。</p></article><article class="reveal"><span>5</span><b>制作・納品</b><p>確定後、丁寧にプリントしてお届けします。</p></article></div>
-      <img class="mascot mascot-flow" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
+      <img class="mascot mascot-flow" src="assets/hadaoji-kun.png?v=6" alt="ハダオジくん">
     </section>
 
     <section id="price" class="section price">
       <div class="section-heading reveal"><p class="eyebrow">PRICE</p><h2>料金の目安</h2><p>内容によって変動します。正式金額は無料見積りでご案内します。</p></div>
       <div class="price-cards"><article class="reveal"><b>スタッフTシャツ</b><strong>10枚 19,800円〜</strong><p>胸1色プリントの目安</p></article><article class="featured reveal"><b>チームTシャツ</b><strong>20枚 29,800円〜</strong><p>胸1色プリントの目安</p></article><article class="reveal"><b>クラT・イベント</b><strong>30枚 49,800円〜</strong><p>胸＋背中プリントの目安</p></article></div>
       <p class="price-note reveal">※ボディ・プリント箇所・色数・製版の有無により変動します。</p>
-      <img class="mascot mascot-price" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
+      <img class="mascot mascot-price" src="assets/hadaoji-kun.png?v=6" alt="ハダオジくん">
+    </section>
+
+    <section class="section area">
+      <div class="area-grid">
+        <div class="area-box reveal"><p class="eyebrow">AREA / SEO</p><h3>茨城県から全国へ。<br>小ロットのウェア制作も対応。</h3><p>つくば市・土浦市・常総市周辺の学校、部活動、飲食店、企業ユニフォームはもちろん、全国発送にも対応しています。</p><div class="keyword-list"><span>オリジナルTシャツ 茨城</span><span>チームTシャツ 作成</span><span>店舗ユニフォーム</span><span>シルクスクリーン印刷</span></div></div>
+        <div class="area-check reveal"><div>LINEで相談しやすい</div><div>画像・ラフから相談できる</div><div>1枚から小ロット対応</div><div>学校・店舗・企業に対応</div></div>
+      </div>
     </section>
 
     <section class="section voices">
@@ -109,12 +164,12 @@
     <section id="contact" class="cta reveal">
       <p class="eyebrow">CONTACT</p><h2>まずは無料で<br>相談してみませんか？</h2><p>まだ注文すると決めていなくても大丈夫です。イメージだけでもお気軽にご相談ください。</p>
       <div class="cta-actions"><a class="btn primary large pulse" href="https://lin.ee/WvAakgk">LINEで無料見積り</a><a class="btn secondary light large" href="https://www.instagram.com/hadaoji_print/">Instagramを見る</a></div>
-      <img class="mascot mascot-cta" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
+      <img class="mascot mascot-cta" src="assets/hadaoji-kun.png?v=6" alt="ハダオジくん">
     </section>
   </main>
 
   <a class="fixed-line" href="https://lin.ee/WvAakgk" aria-label="LINEで相談する">LINEで相談</a>
-  <footer class="site-footer"><strong>HADAOJI PRINT</strong><p>株式会社ハダオジ｜オリジナルウェア制作工房</p><p>Instagram: @hadaoji_print</p></footer>
+  <footer class="site-footer"><strong>HADAOJI PRINT</strong><p>株式会社ハダオジ｜オリジナルウェア制作工房</p><p>Instagram: @hadaoji_print</p><div class="footer-links"><a href="#services">できること</a><a href="#works">制作実績</a><a href="#price">料金目安</a><a href="#contact">無料相談</a></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
