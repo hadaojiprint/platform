@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .hero,.worries,.flow,.price,.cta{position:relative;overflow:hidden}
-    .mascot{position:absolute;z-index:8;width:clamp(86px,10vw,150px);height:auto;pointer-events:none;user-select:none;filter:drop-shadow(0 16px 28px rgba(0,0,0,.35))}
-    .mascot-hero{right:5vw;bottom:110px;width:clamp(120px,16vw,220px);transform:rotate(-6deg)}
-    .mascot-worries{left:4vw;bottom:26px;width:clamp(92px,11vw,160px);transform:rotate(7deg);opacity:.96}
-    .mascot-flow{right:4vw;top:86px;width:clamp(84px,9vw,140px);transform:rotate(-8deg);opacity:.95}
-    .mascot-price{left:5vw;top:78px;width:clamp(80px,8vw,130px);transform:rotate(5deg);opacity:.9}
-    .mascot-cta{right:5vw;bottom:20px;width:clamp(110px,13vw,180px);transform:rotate(-4deg)}
-    @media (max-width:900px){.mascot-hero{right:4vw;bottom:12px;width:90px}.mascot-worries,.mascot-flow,.mascot-price{display:none}.mascot-cta{right:2vw;bottom:8px;width:110px;opacity:.28}}
+    .mascot{position:absolute;z-index:8;width:clamp(86px,10vw,150px);height:auto;pointer-events:none;user-select:none;filter:drop-shadow(0 16px 28px rgba(0,0,0,.35));opacity:1;transform:none}
+    .mascot-hero{right:5vw;bottom:110px;width:clamp(120px,16vw,220px)}
+    .mascot-worries{left:4vw;bottom:26px;width:clamp(92px,11vw,160px)}
+    .mascot-flow{right:4vw;top:86px;width:clamp(84px,9vw,140px)}
+    .mascot-price{left:5vw;top:78px;width:clamp(80px,8vw,130px)}
+    .mascot-cta{right:5vw;bottom:20px;width:clamp(110px,13vw,180px);opacity:1}
+    @media (max-width:900px){.mascot-hero{right:4vw;bottom:12px;width:90px}.mascot-worries,.mascot-flow,.mascot-price{display:none}.mascot-cta{right:2vw;bottom:8px;width:110px;opacity:1}}
   </style>
 </head>
 <body>
@@ -49,7 +49,7 @@
         <div class="hero-actions"><a class="btn primary pulse" href="https://lin.ee/WvAakgk">LINEで無料見積り</a><a class="btn secondary" href="#works">制作実績を見る</a></div>
       </div>
       <div class="hero-card reveal"><span>最短相談</span><strong>画像を送るだけ</strong><p>ラフ・参考画像・言葉だけのイメージでもOKです。</p></div>
-      <img class="mascot mascot-hero" src="assets/hadaoji-kun.png?v=4" alt="ハダオジくん">
+      <img class="mascot mascot-hero" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
     </section>
 
     <section class="trust-strip" aria-label="HADAOJI PRINTの特徴">
@@ -60,7 +60,7 @@
       <div class="section-heading reveal"><p class="eyebrow">PROBLEM</p><h2>こんなお悩みありませんか？</h2><p>はじめてのオリジナルウェア制作でも、安心して相談できます。</p></div>
       <div class="worry-grid"><article class="worry-card reveal">デザインが作れない</article><article class="worry-card reveal">イメージだけしかない</article><article class="worry-card reveal">他社の見積が高い</article><article class="worry-card reveal">納期が心配</article><article class="worry-card reveal">少量だから断られそう</article></div>
       <div class="solution reveal"><span>その悩み、</span><strong>HADAOJI PRINTが解決します。</strong></div>
-      <img class="mascot mascot-worries" src="assets/hadaoji-kun.png?v=4" alt="ハダオジくん">
+      <img class="mascot mascot-worries" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
     </section>
 
     <section id="works" class="works-band">
@@ -82,14 +82,14 @@
     <section id="flow" class="section flow">
       <div class="section-heading reveal"><p class="eyebrow">FLOW</p><h2>ご注文の流れ</h2><p>LINEで画像やイメージを送るだけでスタートできます。</p></div>
       <div class="steps"><article class="reveal"><span>1</span><b>お問い合わせ</b><p>LINE・Instagramからご相談ください。</p></article><article class="reveal"><span>2</span><b>ヒアリング</b><p>枚数・色・用途・納期を確認します。</p></article><article class="reveal"><span>3</span><b>デザイン確認</b><p>ラフや画像をもとに制作イメージを整えます。</p></article><article class="reveal"><span>4</span><b>お見積り</b><p>仕様に合わせて金額をご案内します。</p></article><article class="reveal"><span>5</span><b>制作・納品</b><p>確定後、丁寧にプリントしてお届けします。</p></article></div>
-      <img class="mascot mascot-flow" src="assets/hadaoji-kun.png?v=4" alt="ハダオジくん">
+      <img class="mascot mascot-flow" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
     </section>
 
     <section id="price" class="section price">
       <div class="section-heading reveal"><p class="eyebrow">PRICE</p><h2>料金の目安</h2><p>内容によって変動します。正式金額は無料見積りでご案内します。</p></div>
       <div class="price-cards"><article class="reveal"><b>スタッフTシャツ</b><strong>10枚 19,800円〜</strong><p>胸1色プリントの目安</p></article><article class="featured reveal"><b>チームTシャツ</b><strong>20枚 29,800円〜</strong><p>胸1色プリントの目安</p></article><article class="reveal"><b>クラT・イベント</b><strong>30枚 49,800円〜</strong><p>胸＋背中プリントの目安</p></article></div>
       <p class="price-note reveal">※ボディ・プリント箇所・色数・製版の有無により変動します。</p>
-      <img class="mascot mascot-price" src="assets/hadaoji-kun.png?v=4" alt="ハダオジくん">
+      <img class="mascot mascot-price" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
     </section>
 
     <section class="section voices">
@@ -109,7 +109,7 @@
     <section id="contact" class="cta reveal">
       <p class="eyebrow">CONTACT</p><h2>まずは無料で<br>相談してみませんか？</h2><p>まだ注文すると決めていなくても大丈夫です。イメージだけでもお気軽にご相談ください。</p>
       <div class="cta-actions"><a class="btn primary large pulse" href="https://lin.ee/WvAakgk">LINEで無料見積り</a><a class="btn secondary light large" href="https://www.instagram.com/hadaoji_print/">Instagramを見る</a></div>
-      <img class="mascot mascot-cta" src="assets/hadaoji-kun.png?v=4" alt="ハダオジくん">
+      <img class="mascot mascot-cta" src="assets/hadaoji-kun.png?v=5" alt="ハダオジくん">
     </section>
   </main>
 
