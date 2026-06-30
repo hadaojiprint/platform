@@ -26,11 +26,12 @@
     .hero-mini{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.hero-mini span{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 12px;color:#fff;font-weight:900;background:rgba(0,0,0,.28)}
     .quick-estimate{margin-top:22px;color:#ffeb91;font-weight:1000;font-size:15px}.quick-estimate b{color:#fff}
     .service-grid,.area-grid,.guide-grid{display:grid;gap:18px;max-width:1180px;margin:0 auto}.service-grid{grid-template-columns:repeat(3,1fr)}.service-card{background:#fff;border:2px solid #111;border-radius:28px;padding:28px;box-shadow:6px 6px 0 #111}.service-card span{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#ffd21f;border:2px solid #111;font-weight:1000;margin-bottom:12px}.service-card h3{margin:0 0 10px;font-size:24px;line-height:1.25}.service-card p{margin:0;color:#555;font-weight:800}.service-card ul{margin:16px 0 0;padding-left:1.1em;color:#333;font-weight:800}.service-card li{margin:4px 0}
+    .reason-card{position:relative;overflow:hidden}.reason-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.reason-illust{display:grid;place-items:center;width:58px;height:58px;border:2px solid #111;border-radius:18px;background:#fff4b8;font-size:28px;line-height:1;box-shadow:4px 4px 0 #111}.reason-card:hover .reason-illust{transform:translateY(-2px)}
     .start-guide{background:#111;color:#fff}.guide-grid{grid-template-columns:repeat(4,1fr)}.guide-card{background:#1c1c1c;border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:24px}.guide-card b{display:block;color:#ffd21f;font-size:20px;margin-bottom:8px}.guide-card p{margin:0;color:#eee;font-weight:800}.guide-note{max-width:900px;margin:26px auto 0;padding:18px 22px;border-radius:18px;background:#ffd21f;color:#111;text-align:center;font-weight:1000}
     .area{background:linear-gradient(180deg,#fffdf6,#f7f4ec)}.area-grid{grid-template-columns:1.1fr .9fr;align-items:center}.area-box{background:#fff;border:2px solid #111;border-radius:30px;padding:32px;box-shadow:6px 6px 0 #111}.area-box h3{font-size:clamp(28px,4vw,46px);line-height:1.12;margin:0 0 14px}.area-box p{font-weight:800;color:#444}.keyword-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.keyword-list span{background:#111;color:#fff;border-radius:999px;padding:8px 12px;font-weight:900;font-size:13px}.area-check{display:grid;gap:12px}.area-check div{background:#111;color:#fff;border-radius:20px;padding:18px 20px;font-weight:1000;border-left:8px solid #ffd21f}
     .voice-photo{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px;margin-bottom:18px}.voice-tag{display:inline-flex;border-radius:999px;padding:5px 10px;background:#ffd21f;color:#111!important;font-size:12px;letter-spacing:.08em}.stars{display:block;color:#ffd21f;margin-top:10px}.footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px}.footer-links a{color:#ffd21f;font-weight:900}
     @media (max-width:1080px){.service-grid,.guide-grid,.area-grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:900px){.mascot-hero{right:4vw;bottom:12px;width:90px}.mascot-worries,.mascot-flow,.mascot-price{display:none}.mascot-cta{right:2vw;bottom:8px;width:110px;opacity:1}.service-grid,.guide-grid,.area-grid{grid-template-columns:1fr}.hero-mini span{font-size:12px}.service-card,.area-box{border-radius:22px}}
+    @media (max-width:900px){.mascot-hero{right:4vw;bottom:12px;width:90px}.mascot-worries,.mascot-flow,.mascot-price{display:none}.mascot-cta{right:2vw;bottom:8px;width:110px;opacity:1}.service-grid,.guide-grid,.area-grid{grid-template-columns:1fr}.hero-mini span{font-size:12px}.service-card,.area-box{border-radius:22px}.reason-illust{width:52px;height:52px;font-size:25px}}
   </style>
   <script type="application/ld+json">
   {
@@ -124,7 +125,12 @@
 
     <section id="reason" class="section reasons">
       <div class="section-heading reveal"><p class="eyebrow">REASON</p><h2>HADAOJI PRINTが選ばれる理由</h2></div>
-      <div class="reason-grid"><article class="reason-card reveal"><span>01</span><h3>デザインから相談できる</h3><p>「こんな感じ」でOK。ラフや参考画像から、プリントしやすい形に整えます。</p></article><article class="reason-card reveal"><span>02</span><h3>1枚から対応</h3><p>個人用・スタッフ用・チーム用まで、小ロットも大量注文も相談できます。</p></article><article class="reason-card reveal"><span>03</span><h3>一枚ずつ丁寧に制作</h3><p>見た目だけでなく、着る場面・使う目的まで考えて仕上げます。</p></article><article class="reason-card reveal"><span>04</span><h3>納品までサポート</h3><p>相談、見積り、デザイン確認、制作、発送までスムーズに進行します。</p></article></div>
+      <div class="reason-grid">
+        <article class="reason-card reveal"><div class="reason-top"><span>01</span><div class="reason-illust" aria-hidden="true">🎨</div></div><h3>デザインから相談できる</h3><p>「こんな感じ」でOK。ラフや参考画像から、プリントしやすい形に整えます。</p></article>
+        <article class="reason-card reveal"><div class="reason-top"><span>02</span><div class="reason-illust" aria-hidden="true">👕</div></div><h3>1枚から対応</h3><p>個人用・スタッフ用・チーム用まで、小ロットも大量注文も相談できます。</p></article>
+        <article class="reason-card reveal"><div class="reason-top"><span>03</span><div class="reason-illust" aria-hidden="true">🖐️</div></div><h3>一枚ずつ丁寧に制作</h3><p>見た目だけでなく、着る場面・使う目的まで考えて仕上げます。</p></article>
+        <article class="reason-card reveal"><div class="reason-top"><span>04</span><div class="reason-illust" aria-hidden="true">📦</div></div><h3>納品までサポート</h3><p>相談、見積り、デザイン確認、制作、発送までスムーズに進行します。</p></article>
+      </div>
     </section>
 
     <section id="flow" class="section flow">
