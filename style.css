@@ -183,8 +183,9 @@ button{font:inherit}
   border:2px solid var(--yellow);
   border-radius:var(--radius);
   background:
-    linear-gradient(90deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.78) 56%,rgba(5,5,5,.48) 100%),
-    url("https://hadaojiprint.github.io/stage-worlds.png") center 46% / cover no-repeat;
+    linear-gradient(90deg,rgba(5,5,5,.96) 0%,rgba(5,5,5,.86) 44%,rgba(5,5,5,.18) 100%),
+    url("assets/quest-adventure-island.png") right center / 62% auto no-repeat,
+    #080808;
   image-rendering:pixelated;
   box-shadow:10px 10px 0 var(--yellow);
 }
@@ -226,8 +227,9 @@ button{font:inherit}
   min-height:220px;
   padding:28px;
   border:4px solid #fff;
-  background:#111;
-  box-shadow:inset 0 0 0 6px #000,8px 8px 0 rgba(255,210,31,.9);
+  background:rgba(17,17,17,.74);
+  backdrop-filter:blur(2px);
+  box-shadow:inset 0 0 0 6px rgba(0,0,0,.82),8px 8px 0 rgba(255,210,31,.9);
   font-family:monospace;
   text-align:center;
 }
