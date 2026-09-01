@@ -182,7 +182,10 @@ button{font:inherit}
   padding:clamp(28px,5vw,56px);
   border:2px solid var(--yellow);
   border-radius:var(--radius);
-  background:linear-gradient(135deg,#121212,#050505);
+  background:
+    linear-gradient(90deg,rgba(5,5,5,.92) 0%,rgba(5,5,5,.78) 56%,rgba(5,5,5,.48) 100%),
+    url("https://hadaojiprint.github.io/stage-worlds.png") center 46% / cover no-repeat;
+  image-rendering:pixelated;
   box-shadow:10px 10px 0 var(--yellow);
 }
 .quest-link-card:before{
