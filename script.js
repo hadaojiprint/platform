@@ -275,3 +275,35 @@ document.addEventListener('keydown', (event) => {
 });
 
 console.log('HADAOJI PRINT LP customer voice photos updated');
+
+
+const lineContactLinks = document.querySelectorAll('a[href^="https://lin.ee/"]');
+
+lineContactLinks.forEach((link) => {
+  if (link.dataset.gaLineTracked === 'true') return;
+  link.dataset.gaLineTracked = 'true';
+
+  link.addEventListener('click', () => {
+    const placement = link.classList.contains('fixed-line')
+      ? 'fixed_button'
+      : link.closest('.site-header')
+        ? 'header'
+        : link.closest('.hero')
+          ? 'hero'
+          : link.closest('.area')
+            ? 'area'
+            : link.closest('.cta')
+              ? 'final_cta'
+              : 'page_cta';
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'line_click', {
+        event_category: 'contact',
+        event_label: placement,
+        link_url: link.href,
+        link_text: (link.textContent || '').trim(),
+        transport_type: 'beacon'
+      });
+    }
+  });
+});
