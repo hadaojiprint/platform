@@ -277,14 +277,9 @@ document.addEventListener('keydown', (event) => {
 console.log('HADAOJI PRINT LP customer voice photos updated');
 
 
-const lineContactLinks = document.querySelectorAll('a[href^="https://lin.ee/"]');
-
-lineContactLinks.forEach((link) => {
-  if (link.dataset.gaLineTracked === 'true') return;
-  link.dataset.gaLineTracked = 'true';
-
-  link.addEventListener('click', () => {
-    const placement = link.classList.contains('fixed-line')
+const trackLineClick = (link) => {
+  const placement = link.dataset.linePlacement
+    || (link.classList.contains('fixed-line')
       ? 'fixed_button'
       : link.closest('.site-header')
         ? 'header'
@@ -294,16 +289,29 @@ lineContactLinks.forEach((link) => {
             ? 'area'
             : link.closest('.cta')
               ? 'final_cta'
-              : 'page_cta';
+              : 'page_cta');
 
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'line_click', {
-        event_category: 'contact',
-        event_label: placement,
-        link_url: link.href,
-        link_text: (link.textContent || '').trim(),
-        transport_type: 'beacon'
-      });
-    }
+  if (typeof window.gtag !== 'function') return;
+
+  const eventParams = {
+    event_category: 'contact',
+    event_label: placement,
+    link_placement: placement,
+    link_url: link.href,
+    link_text: (link.textContent || '').trim().replace(/\s+/g, ' '),
+    transport_type: 'beacon'
+  };
+
+  window.gtag('event', 'line_click', eventParams);
+  window.gtag('event', 'generate_lead', {
+    method: 'LINE',
+    link_placement: placement,
+    transport_type: 'beacon'
   });
-});
+};
+
+document.addEventListener('click', (event) => {
+  const clicked = event.target.closest('a[href^="https://lin.ee/"]');
+  if (!clicked) return;
+  trackLineClick(clicked);
+}, { capture: true });
