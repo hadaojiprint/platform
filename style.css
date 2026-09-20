@@ -410,7 +410,7 @@ button{font:inherit}
   background-repeat:no-repeat;
   background-position:center;
   background-size:contain;
-  opacity:var(--heading-art-opacity,.09);
+  opacity:var(--heading-art-opacity,.18);
   filter:var(--heading-art-filter,grayscale(.25));
   pointer-events:none;
 }
@@ -419,11 +419,11 @@ button{font:inherit}
   border-color:rgba(255,255,255,.1);
   background:linear-gradient(110deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
 }
-.services .section-heading{--heading-art:url("assets/reasons/design-consult.svg");--heading-art-opacity:.085}
-.visual-story .section-heading{--heading-art:url("assets/reasons/craft-print.svg");--heading-art-opacity:.095}
-.worries .section-heading{--heading-art:url("assets/hadaoji-kun.png?v=6");--heading-art-opacity:.075}
-.works-band .section-heading{--heading-art:url("assets/reasons/craft-print.svg");--heading-art-opacity:.12;--heading-art-filter:grayscale(1) invert(1)}
-.reasons .section-heading{--heading-art:url("assets/reasons/one-piece.svg");--heading-art-opacity:.085}
+.services .section-heading{--heading-art:url("assets/reasons/design-consult.svg");--heading-art-opacity:.18}
+.visual-story .section-heading{--heading-art:url("assets/reasons/craft-print.svg");--heading-art-opacity:.2}
+.worries .section-heading{--heading-art:url("assets/hadaoji-kun.png?v=6");--heading-art-opacity:1;--heading-art-filter:drop-shadow(0 10px 16px rgba(0,0,0,.18))}
+.works-band .section-heading{--heading-art:url("assets/reasons/craft-print.svg");--heading-art-opacity:.2;--heading-art-filter:grayscale(1) invert(1)}
+.reasons .section-heading{--heading-art:url("assets/reasons/one-piece.svg");--heading-art-opacity:.18}
 .price .section-heading::after{
   content:"¥";
   display:grid;
@@ -433,7 +433,7 @@ button{font:inherit}
   font-size:clamp(100px,15vw,170px);
   font-weight:1000;
   line-height:1;
-  opacity:.055;
+  opacity:.12;
 }
 .voices .section-heading::after{
   content:"“";
@@ -445,7 +445,7 @@ button{font:inherit}
   font-size:clamp(150px,20vw,250px);
   font-weight:900;
   line-height:1;
-  opacity:.065;
+  opacity:.13;
 }
 .faq .section-heading::after{
   content:"?";
@@ -456,19 +456,20 @@ button{font:inherit}
   font-size:clamp(110px,16vw,190px);
   font-weight:1000;
   line-height:1;
-  opacity:.05;
+  opacity:.11;
 }
 .line-start-copy{position:relative;isolation:isolate;overflow:hidden;border-radius:24px}
 .line-start-copy::after{
   content:"";
   position:absolute;
   z-index:0;
-  right:12px;
-  bottom:-44px;
-  width:170px;
-  height:210px;
+  right:18px;
+  bottom:4px;
+  width:128px;
+  height:176px;
   background:url("assets/hadaoji-kun.png?v=6") center/contain no-repeat;
-  opacity:.055;
+  opacity:1;
+  filter:drop-shadow(0 10px 16px rgba(0,0,0,.2));
   pointer-events:none;
 }
 .line-start-copy>*{position:relative;z-index:1}
@@ -482,7 +483,7 @@ button{font:inherit}
   width:190px;
   height:190px;
   background:url("assets/reasons/delivery-support.svg") center/contain no-repeat;
-  opacity:.065;
+  opacity:.16;
   transform:rotate(6deg);
   pointer-events:none;
 }
@@ -496,8 +497,20 @@ button{font:inherit}
     right:-18px;
     width:132px;
     height:72%;
-    opacity:.06;
+    opacity:.15;
   }
-  .line-start-copy::after{right:-26px;width:130px;height:165px}
+  .worries .section-heading::after{
+    right:4px;
+    width:96px;
+    height:64%;
+    opacity:1;
+  }
+  .line-start-copy::after{
+    right:10px;
+    bottom:18px;
+    width:108px;
+    height:148px;
+    opacity:1;
+  }
   .area-box::after{right:-42px;top:24px;width:150px;height:150px}
 }
